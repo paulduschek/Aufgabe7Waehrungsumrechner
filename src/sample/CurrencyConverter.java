@@ -5,5 +5,5 @@ package sample;
  * @version 1.0, 16.11.2020
  */
 
-public class Controller {
+public class CurrencyConverter {
 }
