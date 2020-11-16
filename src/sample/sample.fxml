@@ -19,9 +19,9 @@
       <RowConstraints />
    </rowConstraints>
    <children>
-      <Button mnemonicParsing="false" text="Convert" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <TextField GridPane.rowIndex="1" />
-      <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <Button fx:id="b" mnemonicParsing="false" onAction="#doConvertion" text="Convert" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="t1" onAction="#doConvertion" GridPane.rowIndex="1" />
+      <TextField fx:id="t2" onAction="#doConvertion" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Euro" textAlignment="CENTER" wrappingWidth="148.064453125" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Yen" textAlignment="CENTER" wrappingWidth="146.89923477172852" GridPane.columnIndex="2" />
    </children>
