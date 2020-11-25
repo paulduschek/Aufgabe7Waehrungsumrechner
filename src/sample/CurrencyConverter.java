@@ -10,34 +10,38 @@ import java.util.ArrayList;
 
 public class CurrencyConverter {
 
-    private ArrayList<Currency> al = new ArrayList<Currency>();
+    ArrayList<Currency> cl = new ArrayList<Currency>();
 
     public CurrencyConverter()
     {
-        al.add(new Currency("US-Dollar", 1.19));
-        al.add(new Currency("Yen", 124));
+        cl.add(new Currency("US-Dollar", 1.19));
+        cl.add(new Currency("Yen", 124));
     }
 
     public ArrayList<String> Signs()
     {
         ArrayList<String> list = new ArrayList<String>();
-        for(Currency c : al)
+        for(Currency c : cl)
         {
             list.add(c.getSign());
         }
         return list;
     }
 
-    public double euroTo(String s, double euro)
-    {
-        double v = 1;
-
-        for(Currency c : al)
-        {
-            if(c.getSign().equals(s));
-            v = c.getValue();
-        }
-        return euro * v;
+    public String Name(int n){
+        return cl.get(n).getSign();
     }
 
+    public double euroTo(String s, double euro)
+    {
+        Currency v = null;
+        for(int x = 0; x < cl.size(); x++)
+        {
+            if(cl.get(x).getSign().equals(s))
+            {
+                v = cl.get(x);
+            }
+        }
+        return euro * v.getValue();
+    }
 }

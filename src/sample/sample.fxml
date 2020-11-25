@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints />
@@ -17,12 +17,14 @@
    <rowConstraints>
       <RowConstraints />
       <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
    </rowConstraints>
    <children>
-      <Button fx:id="b" mnemonicParsing="false" onAction="#doConvertion" text="Convert" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <TextField fx:id="t1" onAction="#doConvertion" GridPane.rowIndex="1" />
-      <TextField fx:id="t2" onAction="#doConvertion" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Euro" textAlignment="CENTER" wrappingWidth="148.064453125" />
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Yen" textAlignment="CENTER" wrappingWidth="146.89923477172852" GridPane.columnIndex="2" />
+      <Button fx:id="b" mnemonicParsing="false" onAction="#doConvertion" text="Convert" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+      <TextField fx:id="t1" onAction="#doConvertion" GridPane.rowIndex="3" />
+      <TextField fx:id="t2" onAction="#doConvertion" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Euro" textAlignment="CENTER" wrappingWidth="148.064453125" GridPane.rowIndex="2" />
+      <ChoiceBox fx:id="cBox" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
    </children>
 </GridPane>
